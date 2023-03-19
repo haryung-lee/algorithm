@@ -19,7 +19,6 @@ typedef pair<axis, psi> pas;
 
 int n, m;
 int trie[10000 * 500 + 1][26]; // [최대 문자열 개수 * 최대 길이 + 1][알파벳 소문자]
-int isVisit[10000*500+1];
 char s[501];
 int num = 1;
 
@@ -34,8 +33,6 @@ int main() {
             if (trie[now][t] == 0) trie[now][t] = num++;
             now = trie[now][t];
         }
-        isVisit[now] = 1;
-
     }
 
     int ans = 0;
@@ -51,7 +48,6 @@ int main() {
             }
             now = trie[now][t];
         }
-
         ans += isFind;
     }
     printf("%d", ans);
