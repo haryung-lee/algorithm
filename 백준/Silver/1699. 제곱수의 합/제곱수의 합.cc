@@ -21,9 +21,8 @@ int n;
 int dp[100000];
 
 int go(int total, int tmp) {
-    if (total >= n) {
-        if (total == n) return 0;
-        return 1e9;
+    if (total == n) {
+       return 0;
     }
     if (dp[total] != -1) return dp[total];
 
