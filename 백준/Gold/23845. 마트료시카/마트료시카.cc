@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-int dollcount[200001];
+int dollcount[100001];
 int main()
 {
 	long long N, Q = 0, cnt = 0;
